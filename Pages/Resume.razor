@@ -1,0 +1,59 @@
+﻿@page "/experience"
+
+<PageTitle>Experience</PageTitle>
+
+<div class="console-container">
+    <div class="console-output">
+        <div class="output-line" id="outputLines">
+            <ul>
+                @foreach (var line in outputLines)
+                {
+
+                    @((MarkupString)line)
+
+                }
+            </ul>
+        </div>
+        @*  <input type="text" placeholder="Enter command... Type 'Help' for some options." class="console-input"
+        @bind="inputValue" @onkeydown="@HandleEnterKey">
+        *@
+    </div>
+</div>
+@code {
+    private List<string> outputLines;
+    protected override async Task OnInitializedAsync()
+    {
+        outputLines = new List<string>()
+        {
+"<div class=\"display-6\"><b>WFM Enterprises</b></div>",
+"<div><b><i>10/2024 - Present: Software Developer Contractor</b></i></div>",
+"<div><b><i>08/2021 - 09/2024: IT Lead</b></i></div>",
+"<li>Maintained and enhanced proprietary software for 100+ daily internal users across 14 car wash locations.</li>",
+"<li>Designed and implemented key modules, including incident tracking, chemical usage tracking, company announcements, daily deposit forms, membership sales (with API integration), learning management system, ticketing system, and checklist system.</li>",
+"<li>Collected, prioritized, and acted on user feedback to guide software improvements and feature development.</li>",
+"<li>Managed the end-to-end development of new features, including planning, design, implementation, and deployment.</li>",
+"<li>Diagnosed and resolved bugs to ensure software reliability and performance.</li>",
+"<li>Oversaw application deployment, updates, and release notes, and created unit and integration tests.</li>",
+"<li>Collaborated with other departments to design and implement features enhancing business efficiency.</li>",
+"<li>Assisted with server rack and hardware installations at car wash locations.</li>",
+    "<div class=\"mt-5\"></div>",
+    "<div class=\"display-6\"><b>Pingman Tools LLC</b></div>",
+    "<div><b><i>02/2018 - 08/2021: Software Developer</b></i></div>",
+"<li>In charge of developing and maintaining internal tools used for various functions, including testing, licensing, error-tracking, and sales.</li>",
+"<li>Vital role in enhancing and creating features for the company’s flagship program using primarily C# and JavaScript.</li>",
+"<li>Involved in architectural discussions and decisions for all products.</li>",
+"<li>Key contributor to identifying/fixing bugs and implementing customer requests in released software.</li>",
+"<li>In charge of creating a testing plan for each program and overseeing QA efforts for each release.</li>",
+"<li>Heavily involved in reworking the QA/Release strategy to create more stable releases and more useful testing processes.</li>",
+
+        };
+    }
+    private string inputValue;
+    private void HandleEnterKey(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter" || e.Code == "NumpadEnter")
+        {
+            outputLines.Add(inputValue);
+        }
+    }
+}

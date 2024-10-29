@@ -1,0 +1,44 @@
+﻿@page "/education"
+
+<PageTitle>Education</PageTitle>
+
+<div class="console-container">
+    <div class="console-output">
+        <div class="output-line" id="outputLines">
+            <ul>
+                @foreach (var line in outputLines)
+                {
+
+                    @((MarkupString)line)
+
+                }
+            </ul>
+        </div>
+        @*  <input type="text" placeholder="Enter command... Type 'Help' for some options." class="console-input"
+        @bind="inputValue" @onkeydown="@HandleEnterKey">
+        *@
+    </div>
+</div>
+@code {
+    private List<string> outputLines;
+    protected override async Task OnInitializedAsync()
+    {
+        outputLines = new List<string>()
+        {
+"<div class=\"display-6\"><b>The Master's University</b></div>",
+"<div><b><i>2019 - 2022: BA of Biblical Studies</b></i></div>",
+"<div class=\"mt-5\"></div>",
+    "<div class=\"display-6\"><b>CodeWorks Boise</b></div>",
+    "<div><b><i>2017: Certificate of Completion</b></i></div>",
+"<li>Full-stack coding boot camp designed to help students think like a developer and learn the basic skills necessary to help them succeed in a software development career.</li>",
+        };
+    }
+    private string inputValue;
+    private void HandleEnterKey(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter" || e.Code == "NumpadEnter")
+        {
+            outputLines.Add(inputValue);
+        }
+    }
+}
