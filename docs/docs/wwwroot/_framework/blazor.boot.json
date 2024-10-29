@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "tj",
   "resources": {
-    "hash": "sha256-SiHs/fTCQoNCFGmZDLd54bLP46qxzZ65UzcV2RtoBRE=",
+    "hash": "sha256-HM5sya8/lvdBQRfgqGMz7hJiXUtapTHRS6LxdfC/Xz8=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.r68v39hjnd.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -48,7 +48,7 @@
       "System.Text.Encodings.Web.wasm": "sha256-MCv+5sGwYGikJ8D76raGF6L+02exyJcFgx2sVlUjmKk=",
       "System.Text.Json.wasm": "sha256-06a/d+2j+pqKjp9lLbyGYATd8HXETVninZtFk3HGSHE=",
       "System.Text.RegularExpressions.wasm": "sha256-8bujMNUMCuxn48zxE7AA6YYcbZJjv76LHEAtNjS6TuE=",
-      "tj.wasm": "sha256-8prM1i/0gU0knqBIQcLfBkAJPuPd1K6+R9aOLMe8i4s="
+      "tj.wasm": "sha256-oX90kztjtGw4/yNOOgSrbcAPlRqvxoyCzFMImo5kt6M="
     }
   },
   "cacheBootResources": true,
